@@ -1,2 +1,23 @@
 // source : https://cses.fi/problemset/task/1083
 // solution :
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int MissingNumber(vector<int> &vNums)
+{
+  int sum = 0;
+  int n = vNums.size();
+  for (int i = 0; i < n; i++)
+  {
+    sum += vNums[i];
+  }
+  return (n + 1) * (n + 2) / 2 - sum;
+}
+
+int main()
+{
+  vector<int> v = {2, 3, 1, 5, 7, 4};
+  cout << MissingNumber(v) << "  ";
+}
+// Sidi Abdullah Lemrabott
